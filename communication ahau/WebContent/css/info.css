@@ -1,0 +1,476 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code,
+	form, fieldset, legend, input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	font-family: "微软雅黑" !important;
+}
+
+/*取消li默认前置标点*/
+li {
+	display: inline;
+}
+a:visited {
+	color: #000000;
+	text-decoration: none;
+}
+/*改变排列从默认竖向排列改为横向排列*/
+a {
+	text-decoration: none;
+}
+
+.fixed_header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 5;
+	height: 75px;
+	background-color: white;
+}
+
+.cp_position {
+	margin: 5px 0 0 100px;
+	width: 180px;
+	height: 60px;
+	float: left;
+	cursor: pointer;
+}
+
+.title {
+	font-size: 22px;
+	font-weight: 700;
+}
+
+.img_1 {
+	width: 60px;
+	height: 60px;
+}
+
+a:visited {
+	color: #000000;
+	text-decoration: none;
+}
+
+.search_div {
+	width: 400px;
+	height: 40px;
+	margin: 20px;
+	margin-left: 50px;
+	float: left;
+}
+
+.search_text {
+	width: 400px;
+	height: 40px;
+	padding: 0px 0px 0px 5px;
+	float: left;
+	font-size: 16px;
+}
+
+.search_pic {
+	position: absolute;
+	top: 30px;
+	left: 1110px;
+	width: 25px;
+	height: 25px;
+}
+
+.home_dis_per {
+	width: 400px;
+	height: 60px;
+	background-color: white;
+	float: left;
+	margin: 10px 15px;
+}
+
+.homepage_pic {
+	float: left;
+	width: 40px;
+	height: 40px;
+	margin: 10px;
+	margin-right: 0;
+	margin-left: 50px;
+}
+
+.homepage_word {
+	float: left;
+	font-family: "微软雅黑";
+	font-size: 20px;
+	line-height: 60px;
+	text-align: center;
+}
+
+.login-button {
+	float: right;
+	width: 180px;
+	height: 40px;
+	margin: 10px 160px 0 0;
+	padding: 0 12px;
+}
+
+.img1 {
+	width: 40px;
+	height: 40px;
+}
+
+.login {
+	font-size: 20px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.btn1 {
+	border: 0;
+	background-color: white;
+	outline: none;
+	cursor: pointer;
+	width: 180px;
+	height: 50px;
+}
+
+
+
+.publish_bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 1700px;
+	height: 2000px;
+	display: none;
+	z-index: 200;
+	background: #1a1a1a;
+	bottom: 0;
+	opacity: 0;
+	position: fixed;
+	right: 0;
+	transition: opacity .3s, bottom 0s .3s;
+}
+
+.btn1 {
+	border: 0;
+	background-color: white;
+	outline: none;
+	cursor: pointer;
+	width: 180px;
+	height: 50px;
+}
+
+.img1 {
+	width: 40px;
+	height: 40px;
+}
+
+.info_left {
+	width: 260px;
+	height: 1000px;
+	float: left;
+	margin-left: 130px;
+	z-index: 2;
+	position: fixed;
+	top: 0;
+}
+
+.info_left_top {
+	width: 260px;
+	height: 84px;
+}
+
+.info_left_bottom {
+	width: 260px;
+	height: 900px;
+	/*background-color: white;*/
+}
+
+.info_right {
+	width: 1100px;
+	height: 2000px;
+	float: left;
+	margin-top: 78px;
+	margin-left: 420px;
+}
+
+.info_right_top {
+	width: 1100px;
+	height: 570px;
+}
+
+.info_right_top_bottom {
+	width: 1100px;
+	height: 50px;
+}
+
+.info_right_top_top {
+	width: 1100px;
+	height: 510px;
+}
+
+.imginfo1 {
+	width: 1100px;
+	height: 510px;
+}
+
+.info_right_bottom {
+	width: 1100px;
+	height: 1420px;
+	margin-top: 10px;
+}
+
+.info_right_bottom_left {
+	width: 765px;
+	height: 1420px;
+	float: left;
+	background-color: white;
+}
+
+.info_right_bottom_right {
+	width: 325px;
+	height: 1420px;
+	float: left;
+	margin-left: 10px;
+	background-color: white;
+}
+
+.info_left_bottom_div1 {
+	width: 260px;
+	height: 260px;
+}
+
+.imgvia {
+	width: 220px;
+	height: 220px;
+	margin: 30px 0 0 40px;
+	margin-top: 30px;
+}
+
+.name {
+	font-family: "微软雅黑";
+	color: #565656;
+	padding: 0 40px;
+	font-size: 32px;
+}
+
+.imginfo2 {
+	width: 18px;
+	height: 18px;
+	fill: currentColor;
+	margin-top: 6px;
+	margin-right: 6px;
+}
+
+.btnimg1 {
+	position: absolute;
+	width: 150px;
+	height: 33px;
+	right: 260px;
+	top: 100px;
+	margin-right: 10px;
+}
+
+.btnimg2 {
+	color: white;
+	background-color: #0084ff;
+	opacity: .7;
+	height: 40px;
+	width: 140px;
+	display: inline-block;
+	padding: 0 16px;
+	font-size: 18px;
+	line-height: 32px;
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid;
+	border-radius: 3px;
+	outline: none;
+}
+
+.Button {
+	display: inline-block;
+	padding: 0 14px;
+	font-size: 14px;
+	line-height: 32px;
+	color: #8590a6;
+	text-align: center;
+	cursor: pointer;
+	background: none;
+	border: 1px solid;
+	border-radius: 3px;
+}
+
+.idea_1_footer {
+	margin: 10px;
+	width: 400px;
+	height: 40px;
+	float: left;
+}
+
+.info_right_top_bottom_right {
+	float: right;
+	width: 150px;
+	height: 40px;
+	margin: 8px;
+}
+
+.li_0 {
+	width: 80px;
+	height: 30px;
+	list-style: none;
+	float: left;
+	cursor: pointer;
+}
+
+.photo3 {
+	width: 30px;
+	height: 30px;
+}
+
+.char1 {
+	font-size: 18px;
+}
+
+.idea_1 {
+	width: 765px;
+	margin: 10px;
+	padding-top: 10px;
+}
+
+.idea_1_top {
+	height: 80px;
+}
+
+.idea_1_top_left {
+	float: left;
+	width: 60px;
+	height: 60px;
+	margin: 10px;
+}
+
+.idea_1_top_right {
+	float: left;
+	width: 500px;
+	padding-top: 10px;
+}
+
+.idea_name {
+	font-family: "微软雅黑";
+	font-size: 22px;
+}
+
+.btnmore {
+	width: 35px;
+	height: 35px;
+	float: right;
+	margin-right: 25px;
+	display: inline-block;
+	cursor: pointer;
+	background: white;
+	border: none;
+	outline: none;
+}
+
+.idea_1_bottom {
+	margin: 0 10px;
+	margin-right: 20px;
+	height: 280px;
+}
+
+.photo1 {
+	width: 190px;
+	height: 190px;
+	margin: 6px 0 0 6px;
+	float: left;
+	display: list-item;
+	list-style: none;
+	text-align: -webkit-match-parent;
+}
+
+.photo2 {
+	width: 190px;
+	height: 190px;
+}
+
+.li_0 {
+	width: 100px;
+	height: 30px;
+	list-style: none;
+	float: left;
+	cursor: pointer;
+}
+
+.photo3 {
+	width: 25px;
+	height: 25px;
+}
+
+.imginfo {
+	width: 60px;
+	height: 60px;
+	display: flex;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.imginfo11 {
+	width: 25px;
+	height: 25px;
+}
+
+.info_left_bottom_div3 {
+	padding: 10px 33px;
+	color: #565656;
+}
+
+.info_left_bottom_div4 {
+	padding: 10px 0 0 40px;
+	color: #565656;
+}
+
+.btn111 {
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: #F6F6F6;
+}
+
+.info_right_bottom_right_div1 {
+	width: 325px;
+	height: 500px;
+}
+
+.d1 {
+	padding: 20px;
+	width: 285px;
+	height: 40px;
+	border-bottom: 1px solid gainsboro;
+}
+
+.d2 {
+	width: 325px;
+	height: 200px;
+}
+
+.d3 {
+	width: 285px;
+	height: 200px;
+	margin: 0 20px;
+	padding: 10px 0;
+}
+
+.char2 {
+	font-size: 26px;
+	font-weight: 500;
+}
+
+.info_right_bottom_right_div2 {
+	width: 325px;
+	height: 8px;
+	background-color: #F6F6F6;
+}
+
+.p1 {
+	margin: 10px;
+	font-size: 18px;
+}
