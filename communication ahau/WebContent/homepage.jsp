@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+	pageEncoding="UTF-8" isELIgnored="false"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
 <head>
@@ -17,15 +17,15 @@
 <body bgcolor="#F6F6F6">
 	<div class="fixed_header">
 		<div class="cp_position">
-				<a href="#">
-					<table>
-						<tr>
-							<td><img class="img_1" src="img/couple.png"></td>
-							<td><span class="title">平行宇宙</span></td>
-						</tr>
-					</table>
-				</a>
-			</div>
+			<a href="#">
+				<table>
+					<tr>
+						<td><img class="img_1" src="img/couple.png"></td>
+						<td><span class="title">平行宇宙</span></td>
+					</tr>
+				</table>
+			</a>
+		</div>
 
 		<div class="home_dis_per">
 			<ul class="ul_list">
@@ -47,8 +47,8 @@
 		</div>
 		<div class="search_div">
 			<input class="search_text" name="search" type="text"
-				 placeholder="探索未知的宇宙..."  /> <img
-				class="search_pic" src="img/search.png" title="搜索" />
+				placeholder="探索未知的宇宙..." /> <img class="search_pic"
+				src="img/search.png" title="搜索" />
 		</div>
 		<!--登录框-->
 		<div class="login-button">
@@ -146,7 +146,7 @@
 									<img src="img/camera.png" class="imginfo2" />添加图片
 								</button>
 							</div>
-							<div class="publish_bottom_right"  type="button">
+							<div class="publish_bottom_right" type="button">
 								<button class="btn11">发布</button>
 							</div>
 						</div>
@@ -164,10 +164,10 @@
 							</div>
 							<div class="idea_1_top_right">
 								<div>
-									<span class="idea_name">早春的松</span>
+									<span class="idea_name">${sessionScope.nickname }</span>
 								</div>
 								<div>
-									<span class="idea_charsign">个性签名</span>
+									<span class="idea_charsign">${sessionScope.sign }</span>
 								</div>
 							</div>
 						</div>
@@ -232,12 +232,13 @@
 					<div class="myselfinfo">
 						<div class="infotop">
 							<div class="headpic">
-								<a href="index.html"><img class="imginfo" src="img/bg.jpg" /></a>
+								<a href="<%=request.getContextPath()%>/info.jsp"><img
+									class="imginfo" src="img/bg.jpg" /></a>
 							</div>
 						</div>
 						<div class="infobottom">
 							<div class="namebox">
-								<a href="info.html" class="namea">早春的松</a>
+								<a href="<%=request.getContextPath()%>/info.jsp" class="namea">${sessionScope.nickname }</a>
 							</div>
 							<div class="fansinfo">
 								<ul>

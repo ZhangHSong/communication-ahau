@@ -1,7 +1,7 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -93,11 +93,11 @@
 			</div>
 
 			<div id="loginScreen">
-				<form action="mercury/LogininServlet" method="post"
+				<form action="${pageContext.request.contextPath }/SigninServlet" method="post"
 					onsubmit="return sbsignin();">
 					<table cellpadding="2">
 						<tr>
-							<td><input type="text" id="pnumber" name="pnumber"
+							<td><input type="text" id="pnumber" name="phonenumber"
 								class="text1" placeholder="请输入登录手机号" /></td>
 						</tr>
 						<tr>
@@ -116,17 +116,17 @@
 					</table>
 				</form>
 			</div>
-
+			
 			<div id="logupScreen">
-				<form action="mercury/LogininServlet" method="post"
+				<form action="${pageContext.request.contextPath }/SignupServlet" method="post"
 					onsubmit="return sbsignup();">
 					<table cellpadding="2">
 						<tr>
-							<td><input type="text" id="pnumber1" name="pnumber"
+							<td><input type="text" id="pnumber1" name="phonenumber1"
 								class="text1" placeholder="请输入注册手机号" /></td>
 						</tr>
 						<tr>
-							<td><input type="password" id="password1" name="password"
+							<td><input type="password" id="password1" name="password1"
 								class="text1" placeholder="6-16位密码，区分大小写，不能用空格" /></td>
 						</tr>
 						<tr>
