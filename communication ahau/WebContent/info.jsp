@@ -12,6 +12,32 @@
 	
 </script>
 <title>communication-ahau</title>
+<script type="text/javascript">
+	$(function() {
+		$("#pic").click(function() {
+			$("#upload").click(); //隐藏了input:file样式后，点击头像就可以本地上传
+			$("#upload").on("change", function() {
+				var objUrl = getObjectURL(this.files[0]); //获取图片的路径，该路径不是图片在本地的路径
+				if (objUrl) {
+					$("#pic1").attr("src", objUrl); //将图片路径存入src中，显示出图片
+				}
+			});
+		});
+	});
+
+	//建立一個可存取到該file的url
+	function getObjectURL(file) {
+		var url = null;
+		if (window.createObjectURL != undefined) { // basic
+			url = window.createObjectURL(file);
+		} else if (window.URL != undefined) { // mozilla(firefox)
+			url = window.URL.createObjectURL(file);
+		} else if (window.webkitURL != undefined) { // webkit or chrome
+			url = window.webkitURL.createObjectURL(file);
+		}
+		return url;
+	}
+</script>
 </head>
 
 <body bgcolor="#F6F6F6">
@@ -58,8 +84,8 @@
 				<button id="login" class="btn1">
 					<table cellspacing="8">
 						<tr>
-							<td><span class="login">登录 / 注册</span></td>
-							<td><img src="img/signin.png" class="img1" /></td>
+							<td><img src="img/${sessionScope.head_portrait}"
+								class="img1" /></td>
 						</tr>
 					</table>
 				</button>
@@ -73,7 +99,7 @@
 			<div class="info_left_top"></div>
 			<div class="info_left_bottom">
 				<div class="info_left_bottom_div1">
-					<img class="imgvia" src="img/via2.JPG" />
+					<img class="imgvia" src="img/${sessionScope.head_portrait }" />
 				</div>
 				<div class="info_left_bottom_div2">
 					<span class="name">${sessionScope.nickname }</span>
@@ -92,18 +118,23 @@
 				<div class="info_left_bottom_div4">
 					<p class="char1">956位用户赞了</p>
 					<p class="char1">84541位用户关注了</p>
-					<p class="char1">个人主页被浏览了14889次</p>
+					<p class="char1">32343位用户喜欢他</p>
 				</div>
 			</div>
 		</div>
 		<div class="info_right">
 			<div class="info_right_top">
 				<div class="info_right_top_top">
-					<button class="Button btnimg1">
-						<img src="img/camera.png" class="imginfo2" />&nbsp;编辑封面图片
-					</button>
+					<form action="${pageContext.request.contextPath }/InfoServlet"
+						enctype="multipart/form-data" method="post">
+						<div class=" Button btnimg1">
+							<img src="img/camera.png" id="pic" class="imginfo2" />&nbsp;编辑封面图片
+							<input id="upload" name="bgphoto" type="file" class="imginfo5"
+								style="display: none" />
+						</div>
+					</form>
 					<div class="div1">
-						<img src="img/bg1.jpg" class="imginfo1" />
+						<img src="img/bg1.jpg" class="imginfo1" id="pic1" />
 					</div>
 				</div>
 				<div class="info_right_top_bottom">
@@ -141,18 +172,18 @@
 				</div>
 			</div>
 			<div class="info_right_bottom">
-				<div class="info_right_bottom_left">
+				<div class="info_right_bottom_left" >
 					<div class="idea_1">
 						<div class="idea_1_top">
 							<div class="idea_1_top_left">
-								<img src="img/bg.jpg" class="imginfo" />
+								<img src="img/${sessionScope.head_portrait }" class="imginfo" />
 							</div>
 							<div class="idea_1_top_right">
 								<div>
-									<span class="idea_name">早春的松</span>
+									<span class="idea_name">${sessionScope.nickname }</span>
 								</div>
 								<div>
-									<span class="idea_charsign">个性签名</span>
+									<span class="idea_charsign">${sessionScope.sign }</span>
 								</div>
 							</div>
 							<button class="btnmore" type="button">
@@ -221,7 +252,7 @@
 						<div class="d2">
 							<div class="d3">
 								<p class="p1">性别:${sessionScope.gender }</p>
-								<p class="p1">年龄:${sessionScope.age }</p>
+								<p class="p1">年龄:${sessionScope.age }岁</p>
 								<p class="p1">所在地：${sessionScope.location }</p>
 								<p class="p1">专业：${sessionScope.major }</p>
 								<p class="p1">TIM：${sessionScope.wechat }</p>

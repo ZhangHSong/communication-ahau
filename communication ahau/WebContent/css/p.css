@@ -286,3 +286,92 @@ img {
 	cursor: pointer;
 	opacity: 1;
 }
+
+.float {
+	float: left;
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	border: 1px solid #CCCCCC;
+	border-radius: 10px;
+	padding: 5px;
+	margin: 5px;
+}
+
+img {
+	position: relative;
+}
+
+.result {
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+#file_input {
+	display: none;
+}
+
+.se {
+	width: 60px;
+	height: 60px;
+	display: inline-block;
+	cursor: pointer;
+	border: none;
+	float: left;
+	outline: none;
+}
+
+.submit {
+	display: inline-block;
+	padding: 0 14px;
+	font-size: 14px;
+	line-height: 32px;
+	color: #8590a6;
+	text-align: center;
+	cursor: pointer;
+	background: none;
+	border: 1px solid;
+	border-radius: 3px;
+	outline: none;
+	float: left;
+	margin: 15px;
+}
+
+.submit1 {
+	display: inline-block;
+	padding: 0 14px;
+	font-size: 14px;
+	line-height: 32px;
+	color: #8590a6;
+	text-align: center;
+	cursor: pointer;
+	background: none;
+	border: 1px solid;
+	border-radius: 3px;
+	outline: none;
+	float: left;
+	margin: 15px;
+	width: 200px;
+	height: 60px;
+}
+
+.delete {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	text-align: center;
+	line-height: 200px;
+	z-index: 10;
+	font-size: 30px;
+	background-color: rgba(255, 255, 255, 0.8);
+	color: #777;
+	opacity: 0;
+	-webkit-transition-duration: 0.7s;
+}
+
+.delete:hover {
+	cursor: pointer;
+	opacity: 1;
+}

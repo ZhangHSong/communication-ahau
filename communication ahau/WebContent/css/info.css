@@ -257,16 +257,16 @@ a:visited {
 	fill: currentColor;
 	margin-top: 6px;
 	margin-right: 6px;
+	float:left;
+}
+.imginfo5{
+	display: none;
+	float:left;
+	width: 1px;
+	height: 1px;
 }
 
-.btnimg1 {
-	position: absolute;
-	width: 150px;
-	height: 33px;
-	right: 260px;
-	top: 100px;
-	margin-right: 10px;
-}
+
 
 .btnimg2 {
 	color: white;
@@ -297,6 +297,15 @@ a:visited {
 	border: 1px solid;
 	border-radius: 3px;
 }
+.btnimg1 {
+	position: absolute;
+	width: 140px;
+	height: 33px;
+	right: 260px;
+	top: 100px;
+	margin-right: 10px;
+}
+
 
 .idea_1_footer {
 	margin: 10px;

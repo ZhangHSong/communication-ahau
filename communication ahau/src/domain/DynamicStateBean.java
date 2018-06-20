@@ -1,34 +1,27 @@
 package domain;
 /*动态格式*/
 public class DynamicStateBean {
-	private String statenumber;
-	private String character;
+	private String phonenumber;
+	private String character1;
 	private String photo;
 
-	public DynamicStateBean(String statenumber, String character, String photo) {
+	public DynamicStateBean(String phonenumber,String character1, String photo) {
 		super();
-		this.statenumber = statenumber;		//动态编号
-		this.character = character;				//文字
+		this.phonenumber=phonenumber;	//手机号码
+		this.character1 = character1;				//文字
 		this.photo = photo;							//图片地址
 	}
 
 	public DynamicStateBean() {
 	}
 
-	public String getStatenumber() {
-		return statenumber;
+
+	public String getCharacter1() {
+		return character1;
 	}
 
-	public void setStatenumber(String statenumber) {
-		this.statenumber = statenumber;
-	}
-
-	public String getCharacter() {
-		return character;
-	}
-
-	public void setCharacter(String character) {
-		this.character = character;
+	public void setCharacter1(String character1) {
+		this.character1 = character1;
 	}
 
 	public String getPhoto() {
@@ -37,6 +30,14 @@ public class DynamicStateBean {
 
 	public void setPhoto(String photo) {
 		this.photo = photo;
+	}
+
+	public String getPhonenumber() {
+		return phonenumber;
+	}
+
+	public void setPhonenumber(String phonenumber) {
+		this.phonenumber = phonenumber;
 	}
 
 }

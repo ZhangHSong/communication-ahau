@@ -28,19 +28,17 @@ public class SignupServlet extends HttpServlet {
 		String password = request.getParameter("password1");
 		int result;
 		try {
-			if (new UserService().serach(phonenumber) == null) { // 用户已注册
+			if (new UserService().serach(phonenumber) != null) { // 用户已注册
 				response.sendRedirect(request.getContextPath() + "/index.jsp");
 			}
 			result = new UserService().register(new UserBean(phonenumber, password));
 			if (result == 1) {
-				// 请求转发属于同一个请求，因此request对象是同一个。
-				// request.setAttribute("result", "注册成功");
 				HttpSession session = request.getSession(true);
 				session.setMaxInactiveInterval(30);
 				session.setAttribute("phonenumber", phonenumber);
-				System.out.println(session.getId());
-				System.out.println(session.getAttribute("phonenumber"));
-				request.getRequestDispatcher("/information.jsp").forward(request, response);
+				System.out.println("SignupServlet");
+				System.out.println(session);System.out.println(phonenumber);
+				response.sendRedirect(request.getContextPath() + "/information.jsp");
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
