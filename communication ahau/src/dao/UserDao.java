@@ -15,9 +15,9 @@ public class UserDao {
 		// 创建queryRunner
 		QueryRunner qr = new QueryRunner(JDBCUtil.getDataSource());
 		// 编写sql
-		String sqlString = "insert into user(phonenumber,password) values(?,?) ";
+		String sqlString = "insert into user(phonenumber,password1) values(?,?) ";
 
-		int result = qr.update(sqlString, user.getPhonenumber(), user.getPassword());
+		int result = qr.update(sqlString, user.getPhonenumber(), user.getPassword1());
 		return result;
 	}
 
@@ -27,7 +27,7 @@ public class UserDao {
 		// 创建queryRunner
 		QueryRunner qr = new QueryRunner(JDBCUtil.getDataSource());
 		// 编写sql
-		String sqlString = "select * from user where phonenumber=? and password=? ";
+		String sqlString = "select * from user where phonenumber=? and password1=? ";
 
 		UserBean user = qr.query(sqlString, new BeanHandler<>(UserBean.class), phonenumber, password);
 		return user;

@@ -30,8 +30,6 @@ public class StateServlet extends HttpServlet {
 		response.setContentType("text/html;charset=utf-8");
 		HttpSession session = request.getSession(false);
 		String phonenumber = (String) session.getAttribute("phonenumber");
-		System.out.println("StateServlet");
-		System.out.println(session);System.out.println(phonenumber);
 		String photo = "";
 		SmartUpload su1 = new SmartUpload();
 		try {

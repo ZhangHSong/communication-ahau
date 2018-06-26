@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS `signin_table`;
 CREATE TABLE `user` (
   inumber int(10) NOT NULL AUTO_INCREMENT,
   phonenumber varchar(20) NOT NULL,		#手机号
-  password varchar(16) NOT NULL,		#密码
+  password1 varchar(16) NOT NULL,		#密码
   PRIMARY KEY (`inumber`)				
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

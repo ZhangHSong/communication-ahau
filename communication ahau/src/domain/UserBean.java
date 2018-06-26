@@ -2,14 +2,14 @@ package domain;
 /*µÇÂ¼ĞÅÏ¢*/
 public class UserBean {
 	private String phonenumber; // ÊÖ»úºÅÂë
-	private String password; // ÃÜÂë
+	private String password1; // ÃÜÂë
 
 	public UserBean() {
 	}
 
-	public UserBean(String phonenumber, String password) {
+	public UserBean(String phonenumber, String password1) {
 		this.phonenumber = phonenumber;
-		this.password = password;
+		this.password1 = password1;
 	}
 
 	public String getPhonenumber() {
@@ -20,12 +20,12 @@ public class UserBean {
 		this.phonenumber = phonenumber;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getPassword1() {
+		return password1;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPassword1(String password1) {
+		this.password1 = password1;
 	}
 
 }

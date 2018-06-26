@@ -26,6 +26,7 @@ public class SigninServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 设置中文编码方式
+		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		// 获取浏览器发过来的登录参数
 		String phonenumber = request.getParameter("phonenumber");
@@ -37,13 +38,13 @@ public class SigninServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		if (user == null) {
-			response.getWriter().println("用户名或密码错误");
 			System.out.println("error");
 			response.sendRedirect(request.getContextPath() + "/index.jsp");
 		} else {
-			AllBean all;
 			try {
-				all = new AllService().serach(phonenumber);
+				AllBean	all = new AllService().serach(phonenumber);
+				System.out.println(phonenumber);
+				System.out.println("all"+all);
 				HttpSession session = request.getSession(true);
 				session.setMaxInactiveInterval(30);
 				session.setAttribute("phonenumber", phonenumber);
@@ -61,6 +62,7 @@ public class SigninServlet extends HttpServlet {
 				session.setAttribute("exercise", all.getExercise());
 				session.setAttribute("idol", all.getIdol());
 				session.setAttribute("music", all.getMusic());
+				session.setAttribute("bgphoto", all.getBgphoto());
 				response.sendRedirect(request.getContextPath() + "/homepage.jsp");
 			} catch (SQLException e) {
 				e.printStackTrace();

@@ -1,12 +1,7 @@
 package mercury;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.sql.SQLException;
-import java.util.List;
-import java.util.UUID;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,16 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.FileUploadException;
-import org.apache.commons.fileupload.disk.DiskFileItemFactory;
-import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import com.jspsmart.upload.SmartUpload;
 import com.jspsmart.upload.SmartUploadException;
 
+import domain.BgPhotoBean;
 import domain.HeadPhotoBean;
 import domain.HobbyBean;
 import domain.InformationBean;
+import service.BgPhotoService;
 import service.HeadPhotoService;
 import service.HobbyService;
 import service.InformationService;
@@ -131,10 +124,11 @@ public class InformationServlet extends HttpServlet {
 		HobbyBean hobby = new HobbyBean(phonenumber, constellation, bloodtype, exercise, idol, music);
 		InformationBean infor = new InformationBean(phonenumber, nickname, gender, birthday, age, major, wechat,
 				location, sign);
-
+		BgPhotoBean bpg=new BgPhotoBean(phonenumber,"bg1.jpg");
 		try {
 			new InformationService().register(infor);
 			new HobbyService().register(hobby);
+			new BgPhotoService().register(bpg);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -153,7 +147,7 @@ public class InformationServlet extends HttpServlet {
 		session.setAttribute("music", music);
 		session.setAttribute("idol", idol);
 		session.setAttribute("exercise", exercise);
-
+		session.setAttribute("bgphoto", "bg1.jpg");
 		request.getRequestDispatcher("/homepage.jsp").forward(request, response);
 	}
 

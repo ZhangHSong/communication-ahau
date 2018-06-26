@@ -345,7 +345,11 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code,
 	width: 600px;
 	padding-top: 10px;
 }
-
+.idea_1_top_right1 {
+	float: left;
+	width: 450px;
+	margin-top:20px;
+}
 .idea_name {
 	font-family: "Î¢ÈíÑÅºÚ";
 	font-size: 22px;

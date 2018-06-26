@@ -17,13 +17,14 @@ public class AllBean {
 	private String exercise;
 	private String idol;
 	private String music;
+	private String bgphoto;	//±³¾°Í¼Æ¬
 
 	public AllBean() {
 	}
 
 	public AllBean(String phonenumber, String nickname, String gender, String birthday, int age, String major,
 			String wechat, String location, String sign, String head_portrait, String constellation, String bloodtype,
-			String exercise, String idol, String music) {
+			String exercise, String idol, String music,String bgphoto) {
 		super();
 		this.phonenumber = phonenumber;
 		this.nickname = nickname;
@@ -40,6 +41,7 @@ public class AllBean {
 		this.exercise = exercise;
 		this.idol = idol;
 		this.music = music;
+		this.bgphoto=bgphoto;
 	}
 
 	public String getPhonenumber() {
@@ -160,5 +162,13 @@ public class AllBean {
 
 	public void setMusic(String music) {
 		this.music = music;
+	}
+
+	public String getBgphoto() {
+		return bgphoto;
+	}
+
+	public void setBgphoto(String bgphoto) {
+		this.bgphoto = bgphoto;
 	}
 }

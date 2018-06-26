@@ -123,7 +123,7 @@
 							style="width: 0; height: 0; display: none"></iframe>
 						<form id="form" method="post"
 							action="${pageContext.request.contextPath }/StateServlet"
-							enctype="multipart/form-data" enctype="multipart/form-data"
+							enctype="multipart/form-data" 
 							name="fileForm" target="fileUpload">
 							<div class="publish_title">
 								<div class="publish_title_a">
@@ -334,7 +334,7 @@
 			imginfo.className = "imginfo";
 			imginfo.src = "img/${sessionScope.head_portrait }";
 			var idea_1_top_right = document.createElement("div");
-			idea_1_top_right.className = "idea_1_top_right";
+			idea_1_top_right.className = "idea_1_top_right1";
 			var diva = document.createElement("div");
 			var divb = document.createElement("div");
 			var idea_name = document.createElement("span");
@@ -343,8 +343,8 @@
 			idea_name.id = "idea_name"
 			idea_charsign.id = "idea_charsign"
 			idea_charsign.className = "idea_charsign";
-			<%--document.getElementById("idea_name").innerHTML = "${sessionScope.nickname }";
-			document.getElementById("idea_charsign").innerHTML = "${sessionScope.sign }";--%>
+			idea_name.innerText = "${sessionScope.nickname }";
+			idea_charsign.innerText = "${sessionScope.sign }";
 			idea_1_top.appendChild(btnmore);
 			btnmore.appendChild(imgmore);
 			idea_1_top_left.appendChild(imginfo);
@@ -361,9 +361,8 @@
 			idea_character.className = "idea_character";
 			idea_character.id = 'new1';
 			idea_1_bottom.appendChild(idea_character);
-	<%--document.getElementById('new1').innerHTML = document
-					.getElementById('character21').value;--%>
-		var idea_1_photo = document.createElement("div");
+			idea_character.innerText = document.getElementById('character21').value;
+			var idea_1_photo = document.createElement("div");
 			idea_1_photo.className = "idea_1_photo";
 			var idea_photo = document.createElement("div");
 			idea_photo.className = "idea_photo";
@@ -464,6 +463,8 @@
 			idea_1.appendChild(idea_1_footer);
 			var div = document.getElementById("home_main_right_left_bottom");
 			div.appendChild(idea_1);
+			$("#i").attr("src", "img/add.png" ); 
+			$("#character21").empty();
 	<%--$.ajax({
 			type : 'POST',
 			url : '${pageContext.request.contextPath }/StateServlet',

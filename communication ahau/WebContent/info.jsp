@@ -132,10 +132,10 @@
 							<input id="upload" name="bgphoto" type="file" class="imginfo5"
 								style="display: none" />
 						</div>
-					</form>
 					<div class="div1">
-						<img src="img/bg1.jpg" class="imginfo1" id="pic1" />
+						<img src="img/${sessionScope.bgphoto }" class="imginfo1" id="pic1" />
 					</div>
+					</form>
 				</div>
 				<div class="info_right_top_bottom">
 					<div class="idea_1_footer">

@@ -36,12 +36,9 @@ public class SignupServlet extends HttpServlet {
 				HttpSession session = request.getSession(true);
 				session.setMaxInactiveInterval(30);
 				session.setAttribute("phonenumber", phonenumber);
-				System.out.println("SignupServlet");
-				System.out.println(session);System.out.println(phonenumber);
 				response.sendRedirect(request.getContextPath() + "/information.jsp");
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

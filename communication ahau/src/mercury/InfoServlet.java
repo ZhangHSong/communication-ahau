@@ -57,7 +57,7 @@ public class InfoServlet extends HttpServlet {
 		}
 		BgPhotoBean bp = new BgPhotoBean(phonenumber, bgphoto);
 		try {
-			new BgPhotoService().register(bp);
+			new BgPhotoService().gengxin(bp);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
